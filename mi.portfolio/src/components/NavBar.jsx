@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, IconButton, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, IconButton, makeStyles, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu'
 
 
@@ -7,15 +7,15 @@ import MenuIcon from '@material-ui/icons/Menu'
 const useStyles = makeStyles(theme => ({
     offset: theme.mixins.toolbar,
     root: {
-        flexGrow : 1
-        },
+        flexGrow: 1
+    },
     menuButton: {
-        marginRight : theme.spacing(2)
+        marginRight: theme.spacing(2)
     },
     title: {
-        flexGrow : 1
+        flexGrow: 1
     }
-    
+
 
 }))
 
@@ -29,10 +29,11 @@ const NavBar = () => {
                     <IconButton color='inherit' aria-label='menu' className={classes.menuButton}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant='h6'>
+                    <Typography variant='h6' className={classes.title}>
                         Mi Portfolio
 
                     </Typography>
+                    <Button variant='text' color='inherit'>Mi Perfil</Button>
                 </Toolbar>
             </AppBar>
             <div className={classes.offset}>
