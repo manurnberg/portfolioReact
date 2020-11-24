@@ -6,15 +6,27 @@ import Home from './Home'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        display: 'flex'
-    },
-    offset: theme.mixins.toolbar,
-    content: {
-        flexGrow: 1,
-        // backgroundColor : theme.palette.backgroundColor.default,
-        padding: theme.spacing(3)
+        minHeight: '100vh',
+        backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/background1.jpg'})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        // margin: 'auto',
+        //height: '28vh',
+        // width: 'calc(20vw * 0.54 - 2%)',
+        // borderRadius: 8,
+        display: 'flex',
+        // marginLeft: '10px',
+        // marginTop: '10px',
 
     },
+    // offset: theme.mixins.toolbar,
+    // content: {
+    //     flexGrow: 1,
+    //     // backgroundColor : theme.palette.backgroundColor.default,
+    //     padding: theme.spacing(3)
+
+    // },
 }))
 
 const AppContainer = () => {
@@ -24,26 +36,27 @@ const AppContainer = () => {
     const toogleBar = () => {
         setOpen(!open)
     }
-    
+
     return (
         <div className={classes.root}>
-            <NavBar toogleBar={toogleBar}/>
-            <Hidden xsDown>
-                <MenuHidden 
-                variant='permanent'
-                open={true} />
-            </Hidden>
-            <Hidden smUp>
-                <MenuHidden 
-                variant='temporary'
-                open={open} 
-                onClose={toogleBar}/>
-            </Hidden>
+            { <NavBar />
+            // <Hidden xsDown>
+            //     <MenuHidden 
+            //     variant='permanent'
+            //     open={true} />
+            // </Hidden>
+            // <Hidden smUp>
+            //     <MenuHidden 
+            //     variant='temporary'
+            //     open={open} 
+            //     onClose={toogleBar}/>
+            // </Hidden>
 
-            <div className={classes.content}>
-                <div className={classes.offset}></div>
-                <Home />
-            </div>
+            // <div className={classes.content}>
+            //     <div className={classes.offset}></div>
+            //     <Home />
+            // </div> 
+        }
 
         </div>
     )
