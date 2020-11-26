@@ -9,15 +9,15 @@ const useStyles = makeStyles(theme => ({
     cardcarousel : {
 
         width : '100px',
-        height: '400px',
-        marginTop : '150px',
-        //border : '1px solid',
+        height: '500px',
+        marginTop : '100px',
         justifyContent: 'center',
         alignItems: 'center',
 
 
     },
     profilecard : {
+
        
     },
     skillscard: {
