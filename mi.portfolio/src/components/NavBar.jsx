@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Button, IconButton, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, IconButton, Link, makeStyles, Toolbar, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
@@ -54,14 +54,15 @@ const NavBar = (props) => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant='h4' className={classes.title}>
-                    Mi Portfolio
+                    Mi Portfolio | Cacorucho's development experience
 
                     </Typography>
                 <IconButton>
                     <GitHubIcon />
                 </IconButton>
                 <IconButton>
-                    <LinkedInIcon />
+                    <LinkedInIcon><Link href='https://github.com/manurnberg'></Link>
+                    </LinkedInIcon>
                 </IconButton>
                 <IconButton>
                     <InstagramIcon />

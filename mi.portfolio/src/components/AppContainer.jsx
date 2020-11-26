@@ -1,8 +1,7 @@
 import React from 'react'
 import { Hidden, makeStyles } from "@material-ui/core";
 import NavBar from './NavBar';
-import MenuHidden from './MenuHidden';
-import Home from './Home'
+import CardCarousel from './CardCarousel'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,7 +19,7 @@ const useStyles = makeStyles(theme => ({
         // marginTop: '10px',
 
     },
-    // offset: theme.mixins.toolbar,
+     offset: theme.mixins.toolbar,
     // content: {
     //     flexGrow: 1,
     //     // backgroundColor : theme.palette.backgroundColor.default,
@@ -32,32 +31,20 @@ const useStyles = makeStyles(theme => ({
 const AppContainer = () => {
 
     const classes = useStyles()
-    const [open, setOpen] = React.useState(false)
-    const toogleBar = () => {
-        setOpen(!open)
-    }
+    
+   
 
     return (
         <div className={classes.root}>
-            { <NavBar />
-            // <Hidden xsDown>
-            //     <MenuHidden 
-            //     variant='permanent'
-            //     open={true} />
-            // </Hidden>
-            // <Hidden smUp>
-            //     <MenuHidden 
-            //     variant='temporary'
-            //     open={open} 
-            //     onClose={toogleBar}/>
-            // </Hidden>
+            
+            <NavBar />
+            <div className={classes.offset}></div>
+            <CardCarousel />
 
-            // <div className={classes.content}>
-            //     <div className={classes.offset}></div>
-            //     <Home />
-            // </div> 
-        }
-
+            {/* <Home /> */}
+            
+            
+            
         </div>
     )
 }
